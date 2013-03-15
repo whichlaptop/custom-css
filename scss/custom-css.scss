@@ -1,2 +1,104 @@
-// Import the widget styles
-@import 'widget-styles';
+// Geckoboard Custom CSS
+// ---
+
+// This stylesheet allows you to quickly customise your awesome Geckoboards
+// using [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/)
+
+// You will need to have Ruby installed on your machine to run the build
+// process that compiles this file into a stylesheet ready to upload using
+// the custom CSS option when configuring your dashboard from within the
+// Geckoboard application. With Ruby installed you can run `gem install
+// compass` to install the compass gem then `compass compile` to build the
+// stylesheet which you can then find in the `css` directory.
+
+// To quickly configure your dashbaords look and feel you can adjust the
+// values of the variables at the top of each section.
+
+// ## Dashboard styles
+// There isn't much to the dashboard, it's just a place for widgets. You can
+// change the background color and add a background image here though
+
+// The color of the backdrop (the body)
+$body_background_color: #101214;
+
+body {
+  background: /* url(your full image URL here) */ $body_background_color;
+}
+
+// ## Widget styles
+
+// ### Colours
+// These variables dictate the colour of the widget elements
+
+// The main widget body background colour
+$main_background_color: #2a2a2a;
+// The color of the widget header where the title is shown
+$header_background_color: #272727;
+// The color of the widget footer where the action links (edit|copy|delete)
+// are displayed
+$footer_background_color: #1f1f1f;
+// The color of the pagination bar shown in the text widget
+$pagination_background_color: #252525;
+
+// The colour of the widget's title text
+$title_text_color: #8b8b8b;
+// The colour of the widget's footer text
+$footer_text_color: #555;
+// The color of the primary text within the body of the widget
+$primary_text_color: #d3d4d4;
+// The primary widget text has a 1px text shadow with the below colouring
+$primary_text_shadow_color: #0e0e0e;
+// The secondary textual information within the body of the widget
+$secondary_text_color: #818181;
+// The color of links in the widget body
+$widget_link_color: lighten($primary_text_color, 20);
+
+
+// ### Widget structure
+// The anatomy of the widget in it's basic form is shown below, you can target
+// the individual widgets using the id which carries the unique id of each
+// widget shown here as `{{id}}`
+
+//     <article class="widget" id="widget-{{id}}">
+//       <div class="widget-inner widget-size-1x1">
+//         <section class="widget-body clock-widget no-title">
+//           <div class="widget-canvas"></div>
+//         </section>
+//         <footer></footer>
+//       </div>
+//     </article>
+
+// You can set the widget colouring by altering the above variables, edit here
+// to adjust the widget structure
+.widget {
+  // the widget article is the shell which is positioned on the dashboard
+  // you do not need to apply any styling to this element directly
+
+  // The `widget-inner` houses the main elements of the widget
+  .widget-inner {
+    background-color: $main_background_color;
+
+    // The widget header which houses the title
+    > header {
+      background-color: $header_background_color;
+
+      h1 { color: $title_text_color }
+    }
+
+    // The widget footer that houses the action links
+    > footer {
+      color: $footer_text_color;
+      background-color: $footer_background_color;
+    }
+  }
+
+  // The main widget body where the data is displayed within the `widget-canvas`
+  .widget-body {
+    color: $primary_text_color;
+    text-shadow: 1px 1px $primary_text_shadow_color;
+
+    // Secondary text shown within the widget body
+    .t-secondary { color: $secondary_text_color }
+  }
+}
+
