@@ -14,12 +14,14 @@
 // To quickly configure your dashbaords look and feel you can adjust the
 // values of the variables at the top of each section.
 
+@import 'compass/css3';
+
 // ## Dashboard styles
 // There isn't much to the dashboard, it's just a place for widgets. You can
 // change the background color and add a background image here though
 
 // The color of the backdrop (the body)
-$body_background_color: #101214;
+$body_background_color: #f0f0f0;
 
 body {
   background: /* url(your full image URL here) */ $body_background_color;
@@ -31,27 +33,32 @@ body {
 // These variables dictate the colour of the widget elements
 
 // The main widget body background colour
-$main_background_color: #2a2a2a;
+$main_background_color: #fff;
 // The color of the widget header where the title is shown
-$header_background_color: #272727;
+$header_background_color: #f5f5f5;
 // The color of the widget footer where the action links (edit|copy|delete)
 // are displayed
-$footer_background_color: #1f1f1f;
+$footer_background_color: #f5f5f5;
 // The color of the pagination bar shown in the text widget
-$pagination_background_color: #252525;
+$pagination_background_color: #efefef;
 
 // The colour of the widget's title text
 $title_text_color: #8b8b8b;
+// The color of the widget title text shadow
+$title_text_shadow_color: #fff;
 // The colour of the widget's footer text
 $footer_text_color: #555;
+// The colour of the widget's footer text
+$footer_text_shadow_color: #fff;
 // The color of the primary text within the body of the widget
-$primary_text_color: #d3d4d4;
+$primary_text_color: #666;
 // The primary widget text has a 1px text shadow with the below colouring
-$primary_text_shadow_color: #0e0e0e;
+$primary_text_shadow_color: #fff;
 // The secondary textual information within the body of the widget
-$secondary_text_color: #818181;
+$secondary_text_color: #969696;
 // The color of links in the widget body
-$widget_link_color: lighten($primary_text_color, 20);
+$widget_link_color: darken($primary_text_color, 20);
+// The color of the widget shadow
 
 
 // ### Widget structure
@@ -71,24 +78,30 @@ $widget_link_color: lighten($primary_text_color, 20);
 // You can set the widget colouring by altering the above variables, edit here
 // to adjust the widget structure
 .widget {
+  @include box-shadow($body_background_color 0 0 8px);
   // the widget article is the shell which is positioned on the dashboard
   // you do not need to apply any styling to this element directly
 
   // The `widget-inner` houses the main elements of the widget
   .widget-inner {
+    border: solid 1px #e5e5e5;
     background-color: $main_background_color;
 
     // The widget header which houses the title
     > header {
       background-color: $header_background_color;
 
-      h1 { color: $title_text_color }
+      h1 {
+        color: $title_text_color;
+        text-shadow: 1px 1px $title_text_shadow_color;
+      }
     }
 
     // The widget footer that houses the action links
     > footer {
       color: $footer_text_color;
       background-color: $footer_background_color;
+      text-shadow: 1px 1px $footer_text_shadow_color;
     }
   }
 
@@ -106,8 +119,8 @@ $widget_link_color: lighten($primary_text_color, 20);
 // Default styles for the map points and colouring of the countries
 
 // The color of the countries represented on the Map
-$map_country_fill_color: #4a4a4a;
-$map_country_stroke_color: #4a4a4a;
+$map_country_fill_color: #e0e0e0;
+$map_country_stroke_color: #d5d5d5;
 
 .map-widget path {
   fill: $map_country_fill_color;
