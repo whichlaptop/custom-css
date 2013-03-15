@@ -1,24 +1,33 @@
-// Geckoboard Custom CSS
-// ---
+/*
+  Geckoboard Custom CSS
+  ---
 
-// This stylesheet allows you to quickly customise your awesome Geckoboards
-// using [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/)
+  This stylesheet allows you to quickly customise your awesome Geckoboards
+  using [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/)
 
-// You will need to have Ruby installed on your machine to run the build
-// process that compiles this file into a stylesheet ready to upload using
-// the custom CSS option when configuring your dashboard from within the
-// Geckoboard application. With Ruby installed you can run `gem install
-// compass` to install the compass gem then `compass compile` to build the
-// stylesheet which you can then find in the `css` directory.
+  You will need to have Ruby installed on your machine to run the build
+  process that compiles this file into a stylesheet ready to upload using
+  the custom CSS option when configuring your dashboard from within the
+  Geckoboard application. With Ruby installed you can run `gem install
+  compass` to install the compass gem then `compass compile` to build the
+  stylesheet which you can then find in the `css` directory.
 
-// To quickly configure your dashbaords look and feel you can adjust the
-// values of the variables at the top of each section.
+  To quickly configure your dashbaords look and feel you can adjust the
+  values of the variables at the top of each section.
 
+  ## Dashboard styles
+  There isn't much to the dashboard, it's just a place for widgets. You can
+  change the background color and add a background image here though
+*/
+
+// Use CSS3 Mixins supplied in Compass
 @import 'compass/css3';
 
-// ## Dashboard styles
-// There isn't much to the dashboard, it's just a place for widgets. You can
-// change the background color and add a background image here though
+/*
+  ## Dashboard styles
+  There isn't much to the dashboard, it's just a place for widgets. You can
+  change the background color and add a background image here though
+*/
 
 // The color of the backdrop (the body)
 $body_background_color: #f0f0f0;
@@ -27,10 +36,12 @@ body {
   background: /* url(your full image URL here) */ $body_background_color;
 }
 
-// ## Widget styles
+/* ## Widget styles */
 
-// ### Colours
-// These variables dictate the colour of the widget elements
+/*
+  ### Colours
+  These variables dictate the colour of the widget elements
+*/
 
 // The main widget body background colour
 $main_background_color: #fff;
@@ -48,7 +59,7 @@ $title_text_color: #8b8b8b;
 $title_text_shadow_color: #fff;
 // The colour of the widget's footer text
 $footer_text_color: #555;
-// The colour of the widget's footer text
+// The colour of the widget's footer text shadow
 $footer_text_shadow_color: #fff;
 // The color of the primary text within the body of the widget
 $primary_text_color: #666;
@@ -58,25 +69,26 @@ $primary_text_shadow_color: #fff;
 $secondary_text_color: #969696;
 // The color of links in the widget body
 $widget_link_color: darken($primary_text_color, 20);
-// The color of the widget shadow
 
 
-// ### Widget structure
-// The anatomy of the widget in it's basic form is shown below, you can target
-// the individual widgets using the id which carries the unique id of each
-// widget shown here as `{{id}}`
+/*
+  ### Widget structure
+  The anatomy of the widget in it's basic form is shown below, you can target
+  the individual widgets using the id which carries the unique id of each
+  widget shown here as `{{id}}`
 
-//     <article class="widget" id="widget-{{id}}">
-//       <div class="widget-inner widget-size-1x1">
-//         <section class="widget-body clock-widget no-title">
-//           <div class="widget-canvas"></div>
-//         </section>
-//         <footer></footer>
-//       </div>
-//     </article>
+      <article class="widget" id="widget-{{id}}">
+        <div class="widget-inner widget-size-1x1">
+          <section class="widget-body clock-widget no-title">
+            <div class="widget-canvas"></div>
+          </section>
+          <footer></footer>
+        </div>
+      </article>
 
-// You can set the widget colouring by altering the above variables, edit here
-// to adjust the widget structure
+  You can set the widget colouring by altering the above variables, edit here
+  to adjust the widget structure
+*/
 .widget {
   @include box-shadow($body_background_color 0 0 8px);
   // the widget article is the shell which is positioned on the dashboard
@@ -121,8 +133,10 @@ $widget_link_color: darken($primary_text_color, 20);
   }
 }
 
-// ## Map styles
-// Default styles for the map points and colouring of the countries
+/*
+  ## Map styles
+  Default styles for the map points and colouring of the countries
+*/
 
 // The color of the countries represented on the Map
 $map_country_fill_color: #e0e0e0;

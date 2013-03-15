@@ -1,6 +1,55 @@
+/*
+  Geckoboard Custom CSS
+  ---
+
+  This stylesheet allows you to quickly customise your awesome Geckoboards
+  using [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/)
+
+  You will need to have Ruby installed on your machine to run the build
+  process that compiles this file into a stylesheet ready to upload using
+  the custom CSS option when configuring your dashboard from within the
+  Geckoboard application. With Ruby installed you can run `gem install
+  compass` to install the compass gem then `compass compile` to build the
+  stylesheet which you can then find in the `css` directory.
+
+  To quickly configure your dashbaords look and feel you can adjust the
+  values of the variables at the top of each section.
+
+  ## Dashboard styles
+  There isn't much to the dashboard, it's just a place for widgets. You can
+  change the background color and add a background image here though
+*/
+/*
+  ## Dashboard styles
+  There isn't much to the dashboard, it's just a place for widgets. You can
+  change the background color and add a background image here though
+*/
 body {
   background: #f0f0f0; }
 
+/* ## Widget styles */
+/*
+  ### Colours
+  These variables dictate the colour of the widget elements
+*/
+/*
+  ### Widget structure
+  The anatomy of the widget in it's basic form is shown below, you can target
+  the individual widgets using the id which carries the unique id of each
+  widget shown here as `{{id}}`
+
+      <article class="widget" id="widget-{{id}}">
+        <div class="widget-inner widget-size-1x1">
+          <section class="widget-body clock-widget no-title">
+            <div class="widget-canvas"></div>
+          </section>
+          <footer></footer>
+        </div>
+      </article>
+
+  You can set the widget colouring by altering the above variables, edit here
+  to adjust the widget structure
+*/
 .widget {
   -webkit-box-shadow: #f0f0f0 0 0 8px;
   -moz-box-shadow: #f0f0f0 0 0 8px;
@@ -25,6 +74,10 @@ body {
   .widget .widget-actions a:hover {
     background-color: gainsboro; }
 
+/*
+  ## Map styles
+  Default styles for the map points and colouring of the countries
+*/
 .map-widget path {
   fill: #e0e0e0;
   stroke: #d5d5d5; }
