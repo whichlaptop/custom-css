@@ -15,7 +15,11 @@ body {
   text-shadow: 1px 1px #0e0e0e; }
   .widget .widget-body .t-secondary {
     color: #818181; }
+.widget .widget-actions a:hover {
+  background-color: #050505; }
 
 .map-widget path {
   fill: #4a4a4a;
   stroke: #4a4a4a; }
+.map-widget circle {
+  fill: #38cdff; }

@@ -100,6 +100,12 @@ $widget_link_color: lighten($primary_text_color, 20);
     // Secondary text shown within the widget body
     .t-secondary { color: $secondary_text_color }
   }
+
+  // The hover state of the action links in the footer
+  .widget-actions a:hover {
+    // TODO icon font for widget action icons
+    background-color: darken($footer_background_color, 10);
+  }
 }
 
 // ## Map styles
@@ -107,9 +113,18 @@ $widget_link_color: lighten($primary_text_color, 20);
 
 // The color of the countries represented on the Map
 $map_country_fill_color: #4a4a4a;
+// The color of the stroke around each country
 $map_country_stroke_color: #4a4a4a;
+// The color of the map points
+$map_point_fill_color: #38cdff;
 
-.map-widget path {
-  fill: $map_country_fill_color;
-  stroke: $map_country_stroke_color;
+.map-widget {
+  path {
+    fill: $map_country_fill_color;
+    stroke: $map_country_stroke_color;
+  }
+
+  circle {
+    fill: $map_point_fill_color;
+  }
 }
