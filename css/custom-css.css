@@ -1,0 +1,13 @@
+.widget .widget-inner {
+  background-color: #2a2a2a; }
+  .widget .widget-inner > header {
+    background-color: #272727 h1;
+      background-color-color: #8b8b8b; }
+  .widget .widget-inner > footer {
+    color: #555555;
+    background-color: #1f1f1f; }
+.widget .widget-body {
+  color: #d3d4d4;
+  text-shadow: 1px 1px #0e0e0e; }
+  .widget .widget-body .t-secondary {
+    color: #818181; }
