@@ -36,11 +36,9 @@ body {
   background: /* url(your full image URL here) */ $body_background_color;
 }
 
-/* ## Widget styles */
-
 /*
-  ### Colours
-  These variables dictate the colour of the widget elements
+  ## Widget styles
+  The variables below dictate the colour of the widget elements
 */
 
 // The main widget body background colour
@@ -72,10 +70,10 @@ $widget_link_color: lighten($primary_text_color, 20);
 
 
 /*
-  ### Widget structure
   The anatomy of the widget in it's basic form is shown below, you can target
   the individual widgets using the id which carries the unique id of each
-  widget shown here as `{{id}}`
+  widget shown here as `widget-{{id}}` where id is the numeric id of the widget
+  (`widget-12345` for example)
 
       <article class="widget" id="widget-{{id}}">
         <div class="widget-inner widget-size-1x1">
