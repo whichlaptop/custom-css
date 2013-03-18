@@ -14,10 +14,6 @@
 
   To quickly configure your dashbaords look and feel you can adjust the
   values of the variables at the top of each section.
-
-  ## Dashboard styles
-  There isn't much to the dashboard, it's just a place for widgets. You can
-  change the background color and add a background image here though
 */
 /*
   ## Dashboard styles
@@ -27,16 +23,15 @@
 body {
   background: #101214; }
 
-/* ## Widget styles */
 /*
-  ### Colours
-  These variables dictate the colour of the widget elements
+  ## Widget styles
+  The variables below dictate the colour of the widget elements
 */
 /*
-  ### Widget structure
   The anatomy of the widget in it's basic form is shown below, you can target
   the individual widgets using the id which carries the unique id of each
-  widget shown here as `{{id}}`
+  widget shown here as `widget-{{id}}` where id is the numeric id of the widget
+  (`widget-12345` for example)
 
       <article class="widget" id="widget-{{id}}">
         <div class="widget-inner widget-size-1x1">
@@ -67,6 +62,18 @@ body {
 .widget .widget-actions a:hover {
   background-color: #050505; }
 
+/*
+  You can target widgets that belong to a paricular service using the service
+  HTML class that is assigned to each widget. The class names are the lower
+  case equivalent of the service title with all non alphanumeric characters,
+  including spaces, replaced with a hyphen. For example Google Analytics
+  widgets posess the `google-analytics` HTML class.
+
+  If you wish to alter the styling for a particluar template's visualisation
+  you may target the canvas area of that widget type using the template type
+  specific HTML class name. Selectors for each template type are stubbed out
+  below.
+*/
 /*
   ## Map styles
   Default styles for the map points and colouring of the countries

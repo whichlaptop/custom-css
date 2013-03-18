@@ -14,10 +14,6 @@
 
   To quickly configure your dashbaords look and feel you can adjust the
   values of the variables at the top of each section.
-
-  ## Dashboard styles
-  There isn't much to the dashboard, it's just a place for widgets. You can
-  change the background color and add a background image here though
 */
 
 // Use CSS3 Mixins supplied in Compass
@@ -124,6 +120,36 @@ $widget_link_color: lighten($primary_text_color, 20);
     background-color: darken($footer_background_color, 10);
   }
 }
+
+/*
+  You can target widgets that belong to a paricular service using the service
+  HTML class that is assigned to each widget. The class names are the lower
+  case equivalent of the service title with all non alphanumeric characters,
+  including spaces, replaced with a hyphen. For example Google Analytics
+  widgets posess the `google-analytics` HTML class.
+
+  If you wish to alter the styling for a particluar template's visualisation
+  you may target the canvas area of that widget type using the template type
+  specific HTML class name. Selectors for each template type are stubbed out
+  below.
+*/
+
+.bullet-widget .widget-canvas {}
+.clock-widget .widget-canvas {}
+.funnel-widget .widget-canvas {}
+.geckometer-widget .widget-canvas {}
+.highchart-widget .widget-canvas {}
+.image-widget .widget-canvas {}
+.linechart-widget .widget-canvas {}
+.list-widget .widget-canvas {}
+.map-widget .widget-canvas {}
+.monitoring-widget .widget-canvas {}
+.number-widget .widget-canvas {}
+.piechart-widget .widget-canvas {}
+.rag-widget .widget-canvas {}
+.ragcolumn-widget .widget-canvas {}
+.text-widget .widget-canvas {}
+
 
 /*
   ## Map styles
