@@ -2,21 +2,24 @@
   Geckoboard Custom CSS
   ===
 
-  This stylesheet allows you to quickly customise your awesome Geckoboards
-  using [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/)
+  This stylesheet allows you to quickly customise parts of your awesome
+  Geckoboard dashboards.
 
-  You will need to have Ruby installed on your machine to run the build
-  process that compiles this file into a stylesheet ready to upload using
-  the custom CSS option when configuring your dashboard from within the
-  Geckoboard application. With Ruby installed you can run `gem install
-  compass` to install the compass gem then `compass compile` to build the
-  stylesheet which you can then find in the `css` directory.
-
-  To quickly configure your dashbaords look and feel you can adjust the
-  values of the variables at the top of each section.
 */
 
-// Use CSS3 Mixins supplied in Compass
+ // This version of the stylesheet requires the use of
+ // [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/).
+ // You will need to have Ruby installed on your machine to run the build
+ // process that compiles this file into a stylesheet ready to upload using
+ // the custom CSS option when configuring your dashboard from within the
+ // Geckoboard application. With Ruby installed you can run `gem install
+ // compass` to install the compass gem then `compass compile` to build the
+ // stylesheet which you can then find in the `css` directory.
+
+ // To quickly configure your dashbaords look and feel you can adjust the
+ // values of the variables at the top of each section.
+
+ // Use CSS3 Mixins supplied in Compass
 @import 'compass/css3';
 
 /*
@@ -26,7 +29,7 @@
   change the background color and add a background image here though
 */
 
-// The color of the backdrop (the body)
+ // The color of the backdrop (the body)
 $body_background_color: #101214;
 
 body {
@@ -129,12 +132,14 @@ $widget_link_color: lighten($primary_text_color, 20);
   including spaces, replaced with a hyphen. For example Google Analytics
   widgets posess the `google-analytics` HTML class.
 
-  If you wish to alter the styling for a particluar template's visualisation
-  you may target the canvas area of that widget type using the template type
-  specific HTML class name. Selectors for each template type are stubbed out
-  below.
+  If you wish to alter the styling for a particluar template type across all
+  widgets you may target the canvas area of that widget type using the
+  template type specific HTML class name. For example all types of bullet
+  chart use the bullet template and can be targeted with
+  `.bullet-widget .widget-canvas {}`
 */
 
+ // Selectors for each template type are stubbed out below.
 .bullet-widget .widget-canvas {}
 .clock-widget .widget-canvas {}
 .funnel-widget .widget-canvas {}
@@ -155,7 +160,8 @@ $widget_link_color: lighten($primary_text_color, 20);
 /*
   Map styles
   ---
-  Default styles for the map points and colouring of the countries
+
+  Styling for the map points and countries
 */
 
  // The color of the countries represented on the Map

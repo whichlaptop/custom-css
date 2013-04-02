@@ -1,22 +1,14 @@
 /*
   Geckoboard Custom CSS
-  ---
+  ===
 
-  This stylesheet allows you to quickly customise your awesome Geckoboards
-  using [SASS](http://sass-lang.com/) and [Compass](http://compass-style.org/)
+  This stylesheet allows you to quickly customise parts of your awesome
+  Geckoboard dashboards.
 
-  You will need to have Ruby installed on your machine to run the build
-  process that compiles this file into a stylesheet ready to upload using
-  the custom CSS option when configuring your dashboard from within the
-  Geckoboard application. With Ruby installed you can run `gem install
-  compass` to install the compass gem then `compass compile` to build the
-  stylesheet which you can then find in the `css` directory.
-
-  To quickly configure your dashbaords look and feel you can adjust the
-  values of the variables at the top of each section.
 */
 /*
-  ## Dashboard styles
+  Dashboard styles
+  ---
   There isn't much to the dashboard, it's just a place for widgets. You can
   change the background color and add a background image here though
 */
@@ -24,7 +16,8 @@ body {
   background: #101214; }
 
 /*
-  ## Widget styles
+  Widget styles
+  ---
   The variables below dictate the colour of the widget elements
 */
 /*
@@ -41,9 +34,6 @@ body {
           <footer></footer>
         </div>
       </article>
-
-  You can set the widget colouring by altering the above variables, edit here
-  to adjust the widget structure
 */
 .widget .widget-inner {
   background-color: #2a2a2a; }
@@ -69,14 +59,17 @@ body {
   including spaces, replaced with a hyphen. For example Google Analytics
   widgets posess the `google-analytics` HTML class.
 
-  If you wish to alter the styling for a particluar template's visualisation
-  you may target the canvas area of that widget type using the template type
-  specific HTML class name. Selectors for each template type are stubbed out
-  below.
+  If you wish to alter the styling for a particluar template type across all
+  widgets you may target the canvas area of that widget type using the
+  template type specific HTML class name. For example all types of bullet
+  chart use the bullet template and can be targeted with
+  `.bullet-widget .widget-canvas {}`
 */
 /*
-  ## Map styles
-  Default styles for the map points and colouring of the countries
+  Map styles
+  ---
+
+  Styling for the map points and countries
 */
 .map-widget path {
   fill: #4a4a4a;
