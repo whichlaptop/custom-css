@@ -2,21 +2,62 @@ Geckoboard Custom CSS
 ==========
 Starter custom CSS stylesheets for styling your Geckoboard dashboards
 
-Options
+Getting started
 ---
 You have the option of using the SCSS stylesheets in the `scss` directory which
 use Compass and SASS to make it easy to alter your dashboard CSS settings via
 quick to configure variables or you may take the generated CSS stylesheet and
 make the desired changes to that file directly
 
-## SCSS
-To use the SCSS stylesheets you will need to have Ruby installed. With Ruby
-installed you can install compass `gem install compass`.
-[Compass](http://compass-style.org/) is a CSS framework built upon
-[SASS](http://sass-lang.com/). These stylesheets are located in the `scss`
-directory.
+## Using SASS
+We have supplied a starter CSS stylesheet written using
+[Compass](http://compass-style.org/) and [SASS](http://sass-lang.com/) with
+easy to configure sets of variables for changing the common elements of your
+dashboards. The SASS stylesheets are located in the `scss` directory.
 
-## CSS
-You may take the ready made CSS stylesheets which were generated using the SCSS
-stylesheets described above and alter these directly. These stylesheets are in
-the `css` directory.
+## Using plain old CSS
+You may take any of the ready made CSS stylesheets from the `css` directory
+and modify to your needs.
+
+Dashboard
+---
+There isn't much to style on the dashboard itself. You can add a background
+image or change the color using the `body` element or the `#dashboard-wrapper`
+div that surrounds each dashboard. We don't advise changing fonts or colors at
+this level as your custom styles may intefere with the styling of the
+application when in admin mode.
+
+Widgets
+---
+The anatomy of the widget in it's basic form is shown below, you can target
+the individual widgets using the id which carries the unique id of each
+widget shown here as `widget-{{id}}` where id is the numeric id of the widget
+(`widget-12345` for example)
+
+    <article class="widget google-analytics" id="widget-{{id}}">
+      <div class="widget-inner widget-size-1x1">
+        <header>
+          <h1>Widget title</h1>
+        </header>
+        <section class="widget-body number-widget">
+          <div class="widget-canvas"></div>
+        </section>
+        <footer></footer>
+      </div>
+    </article>
+
+
+You can target widgets that belong to a paricular service using the service
+HTML class that is assigned to each widget. The class names are the lower
+case equivalent of the service title with all non-alphanumeric characters,
+including spaces, replaced with a hyphen. For example Google Analytics
+widgets posess the `google-analytics` HTML class name.
+
+If you wish to alter the styling for a particluar template type across all
+widgets you may target the canvas area of that widget type using the
+template type HTML class name. For example all types of bullet
+chart use the `bullet` template and can be targeted with `.bullet-widget` HTML
+class name.
+
+Widgets without a title posses the `no-title` HTML class on the `.widget-body`
+element.
