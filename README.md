@@ -4,20 +4,19 @@ Starter custom CSS stylesheets for styling your Geckoboard dashboards
 
 Getting started
 ---
-You have the option of using the SCSS stylesheets in the `scss` directory which
-use Compass and SASS to make it easy to alter your dashboard CSS settings via
-quick to configure variables or you may take the generated CSS stylesheet and
-make the desired changes to that file directly
+You write your own custom stylesheet based on the information presented below
+or you may take one of the starter stylesheets provided here to get you started.
+We provide two types of stylesheet here, one written in SCSS and a plain CSS
+stylesheets more about which is explained below.
 
-## Using SASS
+### Using plain old CSS
+You may take any of the ready made CSS stylesheets from the `css` directory
+and modify to your needs.
+
+### Using SASS
 We have supplied a starter CSS stylesheet written using
 [Compass](http://compass-style.org/) and [SASS](http://sass-lang.com/) with
 easy to configure sets of variables for changing the common elements of your
-dashboards. The SASS stylesheets are located in the `scss` directory.
-
-## Using plain old CSS
-You may take any of the ready made CSS stylesheets from the `css` directory
-and modify to your needs.
 
 Dashboard
 ---
