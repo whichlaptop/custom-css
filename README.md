@@ -17,6 +17,7 @@ and modify to your needs.
 We have supplied a starter CSS stylesheet written using
 [Compass](http://compass-style.org/) and [SASS](http://sass-lang.com/) with
 easy to configure sets of variables for changing the common elements of your
+dashboards.
 
 Dashboard
 ---
@@ -28,9 +29,9 @@ application when in admin mode.
 
 Widgets
 ---
-The anatomy of the widget in it's basic form is shown below, you can target
-the individual widgets using the id which carries the unique id of each
-widget shown here as `widget-{{id}}` where id is the numeric id of the widget
+The anatomy of a widget in it's basic form is shown below, you can target
+individual widgets using the unique widget id shown on the example as
+`widget-{{id}}` where `id` is the numeric identifier of that widget
 (`widget-12345` for example)
 
     <article class="widget google-analytics" id="widget-{{id}}">
@@ -46,7 +47,7 @@ widget shown here as `widget-{{id}}` where id is the numeric id of the widget
     </article>
 
 
-You can target widgets that belong to a paricular service using the service
+You may target widgets that belong to a paricular service using the service
 HTML class that is assigned to each widget. The class names are the lower
 case equivalent of the service title with all non-alphanumeric characters,
 including spaces, replaced with a hyphen. For example Google Analytics
@@ -58,5 +59,5 @@ template type HTML class name. For example all types of bullet
 chart use the `bullet` template and can be targeted with `.bullet-widget` HTML
 class name.
 
-Widgets without a title posses the `no-title` HTML class on the `.widget-body`
-element.
+Widgets without a title do not have the `<header>` present and posses the
+`no-title` HTML class on the `.widget-body` element.
